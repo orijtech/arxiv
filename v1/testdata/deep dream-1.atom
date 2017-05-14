@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="http://arxiv.org/api/query?search_query%3Ddeep%20dream%26id_list%3D%26start%3D1%26max_results%3D10" rel="self" type="application/atom+xml"/>
+  <title type="html">ArXiv Query: search_query=deep dream&amp;id_list=&amp;start=1&amp;max_results=10</title>
+  <id>http://arxiv.org/api/WllLWCYG5UM6aMRns/VLG7AF/44</id>
+  <updated>2017-05-14T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">24617</opensearch:totalResults>
+  <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">1</opensearch:startIndex>
+  <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
+  <entry>
+    <id>http://arxiv.org/abs/1511.08339v2</id>
+    <updated>2016-02-11T10:58:04Z</updated>
+    <published>2015-11-26T10:03:56Z</published>
+    <title>Dreaming of atmospheres</title>
+    <summary>  Here we introduce the RobERt (Robotic Exoplanet Recognition) algorithm for
+the classification of exoplanetary emission spectra. Spectral retrievals of
+exoplanetary atmospheres frequently requires the preselection of
+molecular/atomic opacities to be defined by the user. In the era of
+open-source, automated and self-sufficient retrieval algorithms, manual input
+should be avoided. User dependent input could, in worst case scenarios, lead to
+incomplete models and biases in the retrieval. The RobERt algorithm is based on
+deep belief neural (DBN) networks trained to accurately recognise molecular
+signatures for a wide range of planets, atmospheric thermal profiles and
+compositions. Reconstructions of the learned features, also referred to as
+`dreams' of the network, indicate good convergence and an accurate
+representation of molecular features in the DBN. Using these deep neural
+networks, we work towards retrieval algorithms that themselves understand the
+nature of the observed spectra, are able to learn from current and past data
+and make sensible qualitative preselections of atmospheric opacities to be used
+for the quantitative stage of the retrieval process.
+</summary>
+    <author>
+      <name>I. P. Waldmann</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.3847/0004-637X/820/2/107</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.3847/0004-637X/820/2/107" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ApJ accepted</arxiv:comment>
+    <link href="http://arxiv.org/abs/1511.08339v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1511.08339v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1612.03659v1</id>
+    <updated>2016-12-12T13:08:55Z</updated>
+    <published>2016-12-12T13:08:55Z</published>
+    <title>Unraveling reported dreams with text analytics</title>
+    <summary>  We investigate what distinguishes reported dreams from other personal
+narratives. The continuity hypothesis, stemming from psychological dream
+analysis work, states that most dreams refer to a person's daily life and
+personal concerns, similar to other personal narratives such as diary entries.
+Differences between the two texts may reveal the linguistic markers of dream
+text, which could be the basis for new dream analysis work and for the
+automatic detection of dream descriptions. We used three text analytics
+methods: text classification, topic modeling, and text coherence analysis, and
+applied these methods to a balanced set of texts representing dreams, diary
+entries, and other personal stories. We observed that dream texts could be
+distinguished from other personal narratives nearly perfectly, mostly based on
+the presence of uncertainty markers and descriptions of scenes. Important
+markers for non-dream narratives are specific time expressions and
+conversational expressions. Dream texts also exhibit a lower discourse
+coherence than other personal narratives.
+</summary>
+    <author>
+      <name>Iris Hendrickx</name>
+    </author>
+    <author>
+      <name>Louis Onrust</name>
+    </author>
+    <author>
+      <name>Florian Kunneman</name>
+    </author>
+    <author>
+      <name>Ali Hürriyetoğlu</name>
+    </author>
+    <author>
+      <name>Antal van den Bosch</name>
+    </author>
+    <author>
+      <name>Wessel Stoop</name>
+    </author>
+    <link href="http://arxiv.org/abs/1612.03659v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1612.03659v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.8005v2</id>
+    <updated>2014-03-09T14:29:23Z</updated>
+    <published>2013-04-30T14:04:41Z</published>
+    <title>Examples of Mori dream spaces with Picard number two</title>
+    <summary>  In this note, we give a sufficient condition such that a projective variety
+with Picard number two is a Mori dream space. Using this condition, we obtain
+examples of Mori dream spaces with Picard number two.
+</summary>
+    <author>
+      <name>Atsushi Ito</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/1304.8005v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1304.8005v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="14C20, 14M99" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.2297v1</id>
+    <updated>2014-02-10T21:02:14Z</updated>
+    <published>2014-02-10T21:02:14Z</published>
+    <title>Connecting Dream Networks Across Cultures</title>
+    <summary>  Many species dream, yet there remain many open research questions in the
+study of dreams. The symbolism of dreams and their interpretation is present in
+cultures throughout history. Analysis of online data sources for dream
+interpretation using network science leads to understanding symbolism in dreams
+and their associated meaning. In this study, we introduce dream interpretation
+networks for English, Chinese and Arabic that represent different cultures from
+various parts of the world. We analyze communities in these networks, finding
+that symbols within a community are semantically related. The central nodes in
+communities give insight about cultures and symbols in dreams. The community
+structure of different networks highlights cultural similarities and
+differences. Interconnections between different networks are also identified by
+translating symbols from different languages into English. Structural
+correlations across networks point out relationships between cultures.
+Similarities between network communities are also investigated by analysis of
+sentiment in symbol interpretations. We find that interpretations within a
+community tend to have similar sentiment. Furthermore, we cluster communities
+based on their sentiment, yielding three main categories of positive, negative,
+and neutral dream symbols.
+</summary>
+    <author>
+      <name>Onur Varol</name>
+    </author>
+    <author>
+      <name>Filippo Menczer</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/2567948.2579697</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/2567948.2579697" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/1402.2297v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1402.2297v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.03425v1</id>
+    <updated>2016-08-11T11:51:21Z</updated>
+    <published>2016-08-11T11:51:21Z</published>
+    <title>Neural Encoding and Decoding with Deep Learning for Dynamic Natural
+  Vision</title>
+    <summary>  How does the brain represent visual information from the outside world? Here,
+we approach this question with a deep convolutional neural network that mimics
+neuronal circuitry and coding, and learns to solve computer vision tasks. Using
+this network as a computational model of the visual cor-tex, we develop novel
+encoding and decoding mod-els to describe the bi-directional relationships
+be-tween visual input and cortical activity measured with functional magnetic
+resonance imaging. Test-ing these models with imaging data from humans watching
+natural movies, we show that the encod-ing model can predict cortical responses
+and re-trieve visual representations at individual brain lo-cations, and that
+the decoding model can decipher the measured cortical activity to reconstruct
+the visual and semantic experiences. Both the encod-ing and decoding models
+utilize cortical representa-tions of hierarchical, invariant, and nonlinear
+visual features. Being self-contained, efficient, and gener-alizable, these
+models constitute a computational workbench for high-throughput investigation
+of all stages of visual processing. We also anticipate that the general
+strategy for neural encoding and decod-ing via deep-learning models will be
+applicable to other sensory or cognitive experiences, e.g. speech, imagery,
+memories and dreams.
+</summary>
+    <author>
+      <name>Haiguang Wen</name>
+    </author>
+    <author>
+      <name>Junxing Shi</name>
+    </author>
+    <author>
+      <name>Yizhen Zhang</name>
+    </author>
+    <author>
+      <name>Kun-Han Lu</name>
+    </author>
+    <author>
+      <name>Zhongming Liu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 8 figures, 1 table</arxiv:comment>
+    <link href="http://arxiv.org/abs/1608.03425v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1608.03425v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.02795v2</id>
+    <updated>2016-06-30T06:12:38Z</updated>
+    <published>2015-10-09T20:00:47Z</published>
+    <title>Dreaming More Data: Class-dependent Distributions over Diffeomorphisms
+  for Learned Data Augmentation</title>
+    <summary>  Data augmentation is a key element in training high-dimensional models. In
+this approach, one synthesizes new observations by applying pre-specified
+transformations to the original training data; e.g.~new images are formed by
+rotating old ones. Current augmentation schemes, however, rely on manual
+specification of the applied transformations, making data augmentation an
+implicit form of feature engineering. With an eye towards true end-to-end
+learning, we suggest learning the applied transformations on a per-class basis.
+Particularly, we align image pairs within each class under the assumption that
+the spatial transformation between images belongs to a large class of
+diffeomorphisms. We then learn a class-specific probabilistic generative models
+of the transformations in a Riemannian submanifold of the Lie group of
+diffeomorphisms. We demonstrate significant performance improvements in
+training deep neural nets over manually-specified augmentation schemes. Our
+code and augmented datasets are available online.
+</summary>
+    <author>
+      <name>Søren Hauberg</name>
+    </author>
+    <author>
+      <name>Oren Freifeld</name>
+    </author>
+    <author>
+      <name>Anders Boesen Lindbo Larsen</name>
+    </author>
+    <author>
+      <name>John W. Fisher III</name>
+    </author>
+    <author>
+      <name>Lars Kai Hansen</name>
+    </author>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Proceedings of the 19th International Conference on Artificial
+  Intelligence and Statistics, pp. 342-350, 2016</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/1510.02795v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1510.02795v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0706.3031v3</id>
+    <updated>2008-05-26T21:33:51Z</updated>
+    <published>2007-06-20T19:46:59Z</published>
+    <title>Duality of antidiagonals and pipe dreams</title>
+    <summary>  Weighted enumeration of reduced pipe dreams (or rc-graphs) results in a
+combinatorial expression for Schubert polynomials. The duality between the set
+of reduced pipe dreams and certain antidiagonals has important geometric
+implications [A. Knutson and E. Miller, Gr\"obner geometry of Schubert
+polynomials, Ann. Math. 161, 1245-1318]. The original proof of the duality was
+roundabout, relying on the algebra of certain monomial ideals and a recursive
+characterization of reduced pipe dreams. This paper provides a direct
+combinatorial proof.
+</summary>
+    <author>
+      <name>Ning Jia</name>
+    </author>
+    <author>
+      <name>Ezra Miller</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 4 figures; v3=v2 = online published version: edited
+  background exposition. (Why v3 = v2? Metadata issues.)</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">S\'eminaire Lotharingien de Combinatoire, Issue 58 (2008), Article
+  B58e. (electronic)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/0706.3031v3" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/0706.3031v3" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="05E99 (Primary), 05E05, 20B30 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0904.3231v1</id>
+    <updated>2009-04-21T12:12:50Z</updated>
+    <published>2009-04-21T12:12:50Z</published>
+    <title>Why dream? A Conjecture on Dreaming</title>
+    <summary>  I propose that the need for sleep and the occurrence of dreams are intimately
+linked to the physical processes underlying the continuing replacement of cells
+and renewal of biomolecules during the lives of higher organisms. Since one
+major function of our brains is to enable us to react to attack, there must be
+truly compelling reasons for us to take them off-line for extended periods, as
+during sleep. I suggest that most replacements occur during sleep. Dreams are
+suggested as part of the means by which the new neural circuitry (I use the
+word in an informal sense) is checked.
+</summary>
+    <author>
+      <name>A M Stoneham</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/0904.3231v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/0904.3231v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1403.7984v2</id>
+    <updated>2015-05-24T19:09:49Z</updated>
+    <published>2014-03-31T13:08:42Z</published>
+    <title>Mori Dream Stacks</title>
+    <summary>  We propose a generalisation of Mori dream spaces to stacks. We show that this
+notion is preserved under root constructions and taking abelian gerbes. Unlike
+the case of Mori dream spaces, such a stack is not always given as a quotient
+of the spectrum of its Cox ring by the Picard group. We give a criterion when
+this is true in terms of Mori dream spaces and root constructions. Finally, we
+compare this notion with the one of smooth toric Deligne-Mumford stacks.
+</summary>
+    <author>
+      <name>Andreas Hochenegger</name>
+    </author>
+    <author>
+      <name>Elena Martinengo</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/s00209-015-1472-1</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1007/s00209-015-1472-1" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages, to appear in Mathematische Zeitschrift</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Mathematische Zeitschrift 280, 1185-1202, 2015</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/1403.7984v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1403.7984v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="14A20, 14L30, 14M25" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.07600v2</id>
+    <updated>2016-05-03T08:23:00Z</updated>
+    <published>2016-04-26T10:07:10Z</published>
+    <title>Slices of Okounkov bodies of big divisors on Mori dream spaces</title>
+    <summary>  The purpose of this paper is to study the slices of the Okounkov bodies of
+Mori dream spaces. First, we analyze all the slices of the Okounkov bodies of
+big divisors on Mori dream spaces associated to some admissible flags. As a
+byproduct, we obtain their descriptions on Mori dream threefolds. Finally, we
+consider its application to the rational polyhedrality of them.
+</summary>
+    <author>
+      <name>Jaesun Shin</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 4 figures. We changed the title and some statements. Also,
+  we added arxiv.org/abs/1506.06525 in references (Corollary 3.9)</arxiv:comment>
+    <link href="http://arxiv.org/abs/1604.07600v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1604.07600v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="14C20, 14M99" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+</feed>
