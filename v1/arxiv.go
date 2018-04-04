@@ -15,6 +15,7 @@
 package arxiv
 
 import (
+	"context"
 	"encoding/xml"
 	"errors"
 	"fmt"
@@ -24,6 +25,9 @@ import (
 	"time"
 
 	"golang.org/x/tools/blog/atom"
+
+	"go.opencensus.io/plugin/ochttp"
+	"go.opencensus.io/trace"
 
 	"github.com/orijtech/otils"
 )
@@ -42,7 +46,7 @@ func (c *Client) httpClient() *http.Client {
 	if rt == nil {
 		rt = http.DefaultTransport
 	}
-	return &http.Client{Transport: rt}
+	return &http.Client{Transport: &ochttp.Transport{Base: rt}}
 }
 
 func (c *Client) SetHTTPRoundTripper(rt http.RoundTripper) {
@@ -166,11 +170,14 @@ type cancelFn func()
 
 var defaultClient = new(Client)
 
-func Search(q *Query) (chan *ResultsPage, cancelFn, error) {
-	return defaultClient.Search(q)
+func Search(ctx context.Context, q *Query) (chan *ResultsPage, cancelFn, error) {
+	return defaultClient.Search(ctx, q)
 }
 
-func (c *Client) Search(q *Query) (chan *ResultsPage, cancelFn, error) {
+func (c *Client) Search(ctx context.Context, q *Query) (chan *ResultsPage, cancelFn, error) {
+	ctx, span := trace.StartSpan(ctx, "arxiv/v1.Search")
+	defer span.End()
+
 	if err := q.Validate(); err != nil {
 		return nil, nil, err
 	}
@@ -214,23 +221,33 @@ func (c *Client) Search(q *Query) (chan *ResultsPage, cancelFn, error) {
 				qv.Set("search_query", filtersStr)
 			}
 
+			cctx, span := trace.StartSpan(ctx, "paging")
+			span.Annotate([]trace.Attribute{
+				trace.Int64Attribute("page", pager.PageNumber),
+			}, "paging")
 			fullURL := fmt.Sprintf("%s/query?%s", baseURL, qv.Encode())
 			req, err := http.NewRequest("GET", fullURL, nil)
 			if err != nil {
+				span.End()
 				respPage.Err = err
 				responsesChan <- respPage
 				return
 			}
 
-			slurp, _, err := c.doReqAndSlurp(req)
+			slurp, _, err := c.doReqAndSlurp(cctx, req)
+			span.End()
 			if err != nil {
 				respPage.Err = err
 				responsesChan <- respPage
 				return
 			}
 
+			_, umSpan := trace.StartSpan(ctx, "xml_unmarshal-to-atom.Feed")
 			feed := new(atom.Feed)
-			if err := xml.Unmarshal(slurp, feed); err != nil {
+			err = xml.Unmarshal(slurp, feed)
+			umSpan.End()
+
+			if err != nil {
 				respPage.Err = err
 				responsesChan <- respPage
 				return
@@ -268,7 +285,10 @@ func makeCanceler() (cancelFn, <-chan bool) {
 	return cancelFn, cancelChan
 }
 
-func (c *Client) doReqAndSlurp(req *http.Request) ([]byte, http.Header, error) {
+func (c *Client) doReqAndSlurp(ctx context.Context, req *http.Request) ([]byte, http.Header, error) {
+	ctx, span := trace.StartSpan(ctx, "arxiv/v1/doReqAndslurp")
+	defer span.End()
+
 	res, err := c.httpClient().Do(req)
 	if err != nil {
 		return nil, nil, err

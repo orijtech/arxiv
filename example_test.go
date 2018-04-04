@@ -15,6 +15,7 @@
 package arxiv_test
 
 import (
+	"context"
 	"fmt"
 	"log"
 
@@ -22,7 +23,7 @@ import (
 )
 
 func Example_client_Search_simple() {
-	resChan, cancel, err := arxiv.Search(&arxiv.Query{
+	resChan, cancel, err := arxiv.Search(context.Background(), &arxiv.Query{
 		Terms:         "deep learning",
 		MaxPageNumber: 5,
 	})
@@ -51,7 +52,7 @@ func Example_client_Search_simple() {
 }
 
 func Example_client_Search_complex() {
-	resChan, cancel, err := arxiv.Search(&arxiv.Query{
+	resChan, cancel, err := arxiv.Search(context.Background(), &arxiv.Query{
 		Filters: []*arxiv.Filter{
 			{
 				Op: arxiv.OpOR,
