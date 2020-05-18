@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"strings"
 	"sync"
 	"time"
 
@@ -110,7 +111,6 @@ type reqPage struct {
 	Terms      string   `json:"search_query"`
 	Start      int64    `json:"start"`
 	MaxResults int64    `json:"max_results"`
-	ArticleIDs []string `json:"id_list"`
 
 	SortBy    SortBy    `json:"sortBy"`
 	SortOrder SortOrder `json:"sortOrder"`
@@ -122,7 +122,6 @@ func (q *Query) reqPage() *reqPage {
 		Start:      q.PageNumber,
 		SortBy:     q.SortBy,
 		MaxResults: q.MaxResultsPerPage,
-		ArticleIDs: q.ArticleIDs[:],
 		SortOrder:  q.SortOrder,
 	}
 }
@@ -219,6 +218,9 @@ func (c *Client) Search(ctx context.Context, q *Query) (chan *ResultsPage, cance
 			}
 			if len(filters) > 0 {
 				qv.Set("search_query", filtersStr)
+			}
+			if len(q.ArticleIDs) > 0 {
+				qv.Set("id_list", strings.Join(q.ArticleIDs, ","))
 			}
 
 			cctx, span := trace.StartSpan(ctx, "paging")
