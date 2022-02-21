@@ -16,14 +16,15 @@ type Feed struct {
 }
 
 type Entry struct {
-	Title     string    `xml:"title"`
-	ID        string    `xml:"id"`
-	Link      []Link    `xml:"link"`
-	Published TimeStr   `xml:"published"`
-	Updated   TimeStr   `xml:"updated"`
-	Author    []*Person `xml:"author"`
-	Summary   *Text     `xml:"summary"`
-	Content   *Text     `xml:"content"`
+	Title      string      `xml:"title"`
+	ID         string      `xml:"id"`
+	Link       []Link      `xml:"link"`
+	Published  TimeStr     `xml:"published"`
+	Updated    TimeStr     `xml:"updated"`
+	Categories []*Category `xml:"category"`
+	Author     []*Person   `xml:"author"`
+	Summary    *Text       `xml:"summary"`
+	Content    *Text       `xml:"content"`
 }
 
 type Link struct {
