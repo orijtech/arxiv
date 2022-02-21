@@ -1,7 +1,8 @@
 # arxiv
 
 Patched version of the stalled go-lang client. 
-* Merged bugfix for id_list parameter.
+* Fixed: id_list parameter.
+* Fixed: Returns all authors now. 
 * Added git version tag.
 
 
