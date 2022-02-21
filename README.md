@@ -3,7 +3,6 @@
 Patched version of the stalled go-lang client. 
 * Merged bugfix for id_list parameter
 * Added git version tag.
-* Refactored some code. 
 
 
 Go API client for arxiv.org. It supports simple as well as advanced searches with filters.
