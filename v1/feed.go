@@ -16,18 +16,28 @@ type Feed struct {
 }
 
 type Entry struct {
-	Title     string    `xml:"title"`
-	ID        string    `xml:"id"`
-	Link      []Link    `xml:"link"`
-	Published TimeStr   `xml:"published"`
-	Updated   TimeStr   `xml:"updated"`
-	Category  []string  `xml:"category:term,attr"`
-	Author    []*Person `xml:"author"`
-	Summary   *Text     `xml:"summary"`
-	Content   *Text     `xml:"content"`
+	XMLName         xml.Name
+	Doi             string    `xml:"doi"`
+	Title           string    `xml:"title"`
+	ID              string    `xml:"id"`
+	Link            []Link    `xml:"link"`
+	Published       TimeStr   `xml:"published"`
+	Updated         TimeStr   `xml:"updated"`
+	Comment         string    `xml:"comment"`
+	Author          []*Person `xml:"author"`
+	Summary         *Text     `xml:"summary"`
+	Content         *Text     `xml:"content"`
+	PrimaryCategory *Class    `xml:"primary_category,omitempty"`
+	Category        []*Class  `xml:"category,omitempty"`
+}
+
+type Class struct {
+	XMLName xml.Name
+	Term    Category `xml:"term,attr"`
 }
 
 type Link struct {
+	XMLName  xml.Name
 	Rel      string `xml:"rel,attr,omitempty"`
 	Href     string `xml:"href,attr"`
 	Type     string `xml:"type,attr,omitempty"`
@@ -37,14 +47,16 @@ type Link struct {
 }
 
 type Person struct {
-	Name  string `xml:"name"`
-	URI   string `xml:"uri,omitempty"`
-	Email string `xml:"email,omitempty"`
+	XMLName xml.Name
+	Name    string `xml:"name"`
+	URI     string `xml:"uri,omitempty"`
+	Email   string `xml:"email,omitempty"`
 }
 
 type Text struct {
-	Type string `xml:"type,attr"`
-	Body string `xml:",chardata"`
+	XMLName xml.Name
+	Type    string `xml:"type,attr"`
+	Body    string `xml:",chardata"`
 }
 
 type TimeStr string

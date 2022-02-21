@@ -2,6 +2,21 @@ package arxiv
 
 type Category string
 
+var categoryTable = getLookupTable()
+
+func (c Category) String() string {
+	return lookupCategory(c)
+}
+
+func lookupCategory(c Category) string {
+	v, ok := categoryTable[c]
+	if ok {
+		return v
+	} else {
+		return "Unknown Category: " + string(c)
+	}
+}
+
 const (
 	StatisticsApplications                                      Category = "stat.AP"
 	StatisticsComputation                                       Category = "stat.CO"
@@ -18,7 +33,7 @@ const (
 	QuantitativeBiologyQuantitativeMethods                      Category = "q-bio.QM"
 	QuantitativeBiologySubcellularProcesses                     Category = "q-bio.SC"
 	QuantitativeBiologyTissuesAndOrgans                         Category = "q-bio.TO"
-	CSArchitecture                                              Category = "cs.AR"
+	CSArchitecture                                              Category = "cs.AR" // https://org/archive/cs
 	CSArtificialIntelligence                                    Category = "cs.AI"
 	CSComputationAndLanguage                                    Category = "cs.CL"
 	ComputationalComplexity                                     Category = "cs.CC"
@@ -53,6 +68,8 @@ const (
 	SoftwareEngineering                                         Category = "cs.SE"
 	CSSound                                                     Category = "cs.SD"
 	SymbolicComputation                                         Category = "cs.SC"
+	SocialAndInformationNetworks                                Category = "cs.SI"
+	SystemsAndControl                                           Category = "cs.SY"
 	NonLinearSciencesAdaptationAndSelfOrganizingSystemsCategory Category = "nlin.AO"
 	NonLinearSciencesCellularAutomataAndLatticeGases            Category = "nlin.CG"
 	NonLinearSciencesChaoticDynamics                            Category = "nlin.CD"
@@ -130,3 +147,137 @@ const (
 	SpacePhysics                                                Category = "physics.space-ph"
 	QuantumPhysics                                              Category = "quant-ph"
 )
+
+func getLookupTable() map[Category]string {
+	categoryMap := map[Category]string{
+		StatisticsApplications:                     "StatisticsApplications",
+		StatisticsComputation:                      "StatisticsComputation",
+		StatisticsMachineLearning:                  "StatisticsMachineLearning",
+		StatisticsMethodology:                      "StatisticsMethodology",
+		StatisticsTheory:                           "StatisticsTheory",
+		QuantitativeBiologyBiomolecules:            "QuantitativeBiologyBiomolecules",
+		QuantitativeBiologyCellBehavior:            "QuantitativeBiologyCellBehavior",
+		QuantitativeBiologyGenomics:                "QuantitativeBiologyGenomics",
+		QuantitativeBiologyMolecularNetworks:       "QuantitativeBiologyMolecularNetworks",
+		QuantitativeBiologyNeuronsAndCognition:     "QuantitativeBiologyNeuronsAndCognition",
+		QuantitativeBiologyOther:                   "QuantitativeBiologyOther",
+		QuantitativeBiologyPopulationsAndEvolution: "QuantitativeBiologyPopulationsAndEvolution",
+		QuantitativeBiologyQuantitativeMethods:     "QuantitativeBiologyQuantitativeMethods",
+		QuantitativeBiologySubcellularProcesses:    "QuantitativeBiologySubcellularProcesses",
+		QuantitativeBiologyTissuesAndOrgans:        "QuantitativeBiologyTissuesAndOrgans",
+		CSArchitecture:                             "CSArchitecture",
+		CSArtificialIntelligence:                   "CSArtificialIntelligence",
+		CSComputationAndLanguage:                   "CSComputationAndLanguage",
+		ComputationalComplexity:                    "ComputationalComplexity",
+		ComputationalEngineeringFinanceAndScience:  "ComputationalEngineeringFinanceAndScience",
+		CSComputationalGeometry:                    "CSComputationalGeometry",
+		CSGameTheory:                               "CSGameTheory",
+		ComputerVisionAndPatternRecognition:        "ComputerVisionAndPatternRecognition",
+		ComputersAndSociety:                        "ComputersAndSociety",
+		CryptographyAndSecurity:                    "CryptographyAndSecurity",
+		Databases:                                  "Databases",
+		DigitalLibraries:                           "DigitalLibraries",
+		DiscreteMathematics:                        "DiscreteMathematics",
+		DistributedParallelAndClusterComputing:     "DistributedParallelAndClusterComputing",
+		CSGeneralLiterature:                        "CSGeneralLiterature",
+		CSGraphics:                                 "CSGraphics",
+		HumanComputerInteraction:                   "HumanComputerInteraction",
+		CSInformationRetrieval:                     "CSInformationRetrieval",
+		CSInformationTheory:                        "CSInformationTheory",
+		CSLearning:                                 "CSLearning",
+		CSLogic:                                    "CSLogic",
+		CSMathematicalSoftware:                     "CSMathematicalSoftware",
+		MultiagentSystems:                          "MultiagentSystems",
+		CSMultimedia:                               "CSMultimedia",
+		NetworkAndInternetArchitecture:             "NetworkAndInternetArchitecture",
+		NeuralAndEvolutionaryComputing:             "NeuralAndEvolutionaryComputing",
+		CSNumericalAnalysis:                        "CSNumericalAnalysis",
+		OperatingSystems:                           "OperatingSystems",
+		CSOther:                                    "CSOther",
+		CSPerformance:                              "CSPerformance",
+		ProgrammingLanguages:                       "ProgrammingLanguages",
+		CSRobotics:                                 "CSRobotics",
+		SoftwareEngineering:                        "SoftwareEngineering",
+		CSSound:                                    "CSSound",
+		SymbolicComputation:                        "SymbolicComputation",
+		SocialAndInformationNetworks:               "SocialAndInformationNetworks",
+		SystemsAndControl:                          "SystemsAndControl",
+		NonLinearSciencesAdaptationAndSelfOrganizingSystemsCategory: "NonLinearSciencesAdaptationAndSelfOrganizingSystemsCategory",
+		NonLinearSciencesCellularAutomataAndLatticeGases:            "NonLinearSciencesCellularAutomataAndLatticeGases",
+		NonLinearSciencesChaoticDynamics:                            "NonLinearSciencesChaoticDynamics",
+		ExactlySolvableAndIntegrableSytems:                          "ExactlySolvableAndIntegrableSytems",
+		PatternFormationAndSolutions:                                "PatternFormationAndSolutions",
+		AlgebraicGeometry:                                           "AlgebraicGeometry",
+		AlgebraicTopology:                                           "AlgebraicTopology",
+		AnalysisOfPDEs:                                              "AnalysisOfPDEs",
+		CategoryTheory:                                              "CategoryTheory",
+		ClassicalAnalysisAndODEs:                                    "ClassicalAnalysisAndODEs",
+		Combinatorics:                                               "Combinatorics",
+		CommutativeAlgebra:                                          "CommutativeAlgebra",
+		ComplexVariables:                                            "ComplexVariables",
+		DifferentialGeometry:                                        "DifferentialGeometry",
+		DynamicalSystems:                                            "DynamicalSystems",
+		FunctionalAnalysis:                                          "FunctionalAnalysis",
+		GeneralMathematics:                                          "GeneralMathematics",
+		GeneralTopology:                                             "GeneralTopology",
+		GeometricTopology:                                           "GeometricTopology",
+		GroupTheory:                                                 "GroupTheory",
+		MathsHistoryAndOverview:                                     "MathsHistoryAndOverview",
+		MathsInformationTheory:                                      "MathsInformationTheory",
+		KTheoryAndHomology:                                          "KTheoryAndHomology",
+		MathsLogic:                                                  "MathsLogic",
+		MathsMathematicalPhysics:                                    "MathsMathematicalPhysics",
+		MetricGeometry:                                              "MetricGeometry",
+		NumberTheory:                                                "NumberTheory",
+		MathsNumericalAnalysis:                                      "MathsNumericalAnalysis",
+		OperatorAlgebras:                                            "OperatorAlgebras",
+		MathsOptimizationAndControl:                                 "MathsOptimizationAndControl",
+		Probability:                                                 "Probability",
+		QuantumAlgebra:                                              "QuantumAlgebra",
+		RepresentationTheory:                                        "RepresentationTheory",
+		RingsAndAlgebra:                                             "RingsAndAlgebra",
+		MathsSpectralTheory:                                         "MathsSpectralTheory",
+		MathsStatics:                                                "MathsStatics",
+		SymplecticGeometry:                                          "SymplecticGeometry",
+		Astrophysics:                                                "Astrophysics",
+		PhysicsDisorderedSystemsAndNeuralNetworks:                   "PhysicsDisorderedSystemsAndNeuralNetworks",
+		PhysicsMesoscopicSystemsAndQuantumHallEffect:                "PhysicsMesoscopicSystemsAndQuantumHallEffect",
+		PhysicsMaterialsScience:                                     "PhysicsMaterialsScience",
+		PhysicsOther:                                                "PhysicsOther",
+		PhysicsSoftCondensedMatter:                                  "PhysicsSoftCondensedMatter",
+		PhysicsStatisticalMechanics:                                 "PhysicsStatisticalMechanics",
+		PhysicsStronglyCorrelatedElectrons:                          "PhysicsStronglyCorrelatedElectrons",
+		PhysicsSuperconductivity:                                    "PhysicsSuperconductivity",
+		GeneralRelativityAndQuantumCosmology:                        "GeneralRelativityAndQuantumCosmology",
+		HighEneryPhysicsExperiment:                                  "HighEneryPhysicsExperiment",
+		HighEneryPhysicsLattice:                                     "HighEneryPhysicsLattice",
+		HighEneryPhysicsPhenomenology:                               "HighEneryPhysicsPhenomenology",
+		HighEneryPhysicsTheory:                                      "HighEneryPhysicsTheory",
+		MathematicalPhysics:                                         "MathematicalPhysics",
+		NuclearExperiment:                                           "NuclearExperiment",
+		NuclearTheory:                                               "NuclearTheory",
+		AcceleratorPhysics:                                          "AcceleratorPhysics",
+		AtmoshpericAndOceanicPhysics:                                "AtmoshpericAndOceanicPhysics",
+		AtomicPhysics:                                               "AtomicPhysics",
+		AtomicAndMolecularClusters:                                  "AtomicAndMolecularClusters",
+		BiologicalPhysics:                                           "BiologicalPhysics",
+		ChemicalPhysics:                                             "ChemicalPhysics",
+		ClassicalPhysics:                                            "ClassicalPhysics",
+		ComputationalPhysics:                                        "ComputationalPhysics",
+		DataAnalysisStatisticsAndProbability:                        "DataAnalysisStatisticsAndProbability",
+		FluidDynamics:                                               "FluidDynamics",
+		GeneralPhysics:                                              "GeneralPhysics",
+		Geophysics:                                                  "Geophysics",
+		HistoryOfPhysics:                                            "HistoryOfPhysics",
+		InstrumentationAndDetectors:                                 "InstrumentationAndDetectors",
+		MedicalPhysics:                                              "MedicalPhysics",
+		Optics:                                                      "Optics",
+		PhysicsEducation:                                            "PhysicsEducation",
+		PhysicsAndSociety:                                           "PhysicsAndSociety",
+		PlasmaPhysics:                                               "PlasmaPhysics",
+		PopularPhysics:                                              "PopularPhysics",
+		SpacePhysics:                                                "SpacePhysics",
+		QuantumPhysics:                                              "QuantumPhysics",
+	}
+	return categoryMap
+}
