@@ -1,7 +1,7 @@
 # arxiv
 
 Patched version of the stalled go-lang client. 
-* Merged bugfix for id_list parameter
+* Merged bugfix for id_list parameter.
 * Added git version tag.
 
 
