@@ -19,18 +19,14 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
+	"github.com/orijtech/otils"
+	"go.opencensus.io/plugin/ochttp"
+	"go.opencensus.io/trace"
 	"io/ioutil"
 	"net/http"
 	"strings"
 	"sync"
 	"time"
-
-	"golang.org/x/tools/blog/atom"
-
-	"go.opencensus.io/plugin/ochttp"
-	"go.opencensus.io/trace"
-
-	"github.com/orijtech/otils"
 )
 
 type Client struct {
@@ -108,9 +104,9 @@ type Query struct {
 // Fresh struct here to avoid sending
 // unnecessary query string values from Query
 type reqPage struct {
-	Terms      string   `json:"search_query"`
-	Start      int64    `json:"start"`
-	MaxResults int64    `json:"max_results"`
+	Terms      string `json:"search_query"`
+	Start      int64  `json:"start"`
+	MaxResults int64  `json:"max_results"`
 
 	SortBy    SortBy    `json:"sortBy"`
 	SortOrder SortOrder `json:"sortOrder"`
@@ -142,7 +138,7 @@ func (q *Query) Validate() error {
 }
 
 type ResultsPage struct {
-	Feed *atom.Feed `json:"feed"`
+	Feed *Feed `json:"feed"`
 
 	PageNumber int64 `json:"page_number"`
 
@@ -245,7 +241,7 @@ func (c *Client) Search(ctx context.Context, q *Query) (chan *ResultsPage, cance
 			}
 
 			_, umSpan := trace.StartSpan(ctx, "xml_unmarshal-to-atom.Feed")
-			feed := new(atom.Feed)
+			feed := new(Feed)
 			err = xml.Unmarshal(slurp, feed)
 			umSpan.End()
 

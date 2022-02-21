@@ -23,10 +23,6 @@ import (
 	"os"
 	"strconv"
 	"testing"
-
-	"golang.org/x/tools/blog/atom"
-
-	"github.com/orijtech/arxiv/v1"
 )
 
 func TestSearch(t *testing.T) {
@@ -164,7 +160,7 @@ func resultsPageFromFile(searchTerm string, pageNumber int64) *arxiv.ResultsPage
 	if err != nil {
 		return nil
 	}
-	feed := new(atom.Feed)
+	feed := new(Feed)
 	if err := xml.Unmarshal(blob, feed); err != nil {
 		return nil
 	}
