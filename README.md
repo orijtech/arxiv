@@ -3,6 +3,9 @@
 Patched version of the stalled go-lang client. 
 * Fixed: id_list parameter.
 * Fixed: Returns all authors now. 
+* Fixed: Returns primary cateegory
+* Fixed: Retruns all secondary categories
+* Fixed: Decodes category keys (i.e. math.SP) to a human readable format (i.e. MathsSpectralTheory) using categeory.Term.String() method
 
 
 Go API client for arxiv.org. It supports simple as well as advanced searches with filters.
