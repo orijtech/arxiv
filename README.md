@@ -18,7 +18,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/orijtech/arxiv/v1"
+    "github.com/marvin-hansen/arxiv/v1"
 )
 ```
 
