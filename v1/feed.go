@@ -21,7 +21,7 @@ type Entry struct {
 	Link      []Link    `xml:"link"`
 	Published TimeStr   `xml:"published"`
 	Updated   TimeStr   `xml:"updated"`
-	Author    *[]Person `xml:"author"`
+	Author    []*Person `xml:"author"`
 	Summary   *Text     `xml:"summary"`
 	Content   *Text     `xml:"content"`
 }
