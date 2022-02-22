@@ -11,10 +11,15 @@ Patched version of the stalled go-lang client.
 Go API client for arxiv.org. It supports simple as well as advanced searches with filters.
 
 
+## Install 
+```go
+ go get github.com/marvin-hansen/arxiv@v0.1.2
+```
+
 ## Usage
 Sample usage can be found in file [example_test.go](./example_test.go)
 Or see below:
-* Preamble:
+* Import:
 ```go
 package main
 
