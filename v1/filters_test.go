@@ -16,8 +16,6 @@ package arxiv_test
 
 import (
 	"testing"
-
-	"github.com/orijtech/arxiv/v1"
 )
 
 func TestFilters(t *testing.T) {

@@ -1,24 +1,32 @@
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
-*.so
+.idea
+.idea/*
 
-# Folders
-_obj
-_test
+.classpath
+.settings/
+.groovy/
+.ijwb/
 
-# Architecture specific extensions/prefixes
-*.[568vq]
-[568vq].out
+notes/*
+notes/*.*
 
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
+# Bazel stuff
+bazel-out
+bazel-out/*.*
+dist
+dist/*.*
 
-_testmain.go
+# Emacs save files
+*~
+\#*\#
+.\#*
 
-*.exe
-*.test
-*.prof
+# Vim-related files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# Crash & log files
+crash.log
+output.log

@@ -18,8 +18,6 @@ import (
 	"context"
 	"fmt"
 	"log"
-
-	"github.com/orijtech/arxiv/v1"
 )
 
 func Example_client_Search_simple() {

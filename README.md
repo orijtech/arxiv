@@ -1,11 +1,25 @@
 # arxiv
+
+Patched version of the stalled go-lang client. 
+* Fixed: id_list parameter.
+* Fixed: Returns all authors now. 
+* Fixed: Returns primary cateegory
+* Fixed: Retruns all secondary categories
+* Fixed: Decodes category keys (i.e. math.SP) to a human readable format (i.e. MathsSpectralTheory) using categeory.Term.String() method
+* Fixed: Added missing categories in major fields: Economics, Quantitative Finance, Statistics, & Electrical Engineering and Systems Science.
+
 Go API client for arxiv.org. It supports simple as well as advanced searches with filters.
 
+
+## Install 
+```go
+ go get github.com/marvin-hansen/arxiv@v0.1.2
+```
 
 ## Usage
 Sample usage can be found in file [example_test.go](./example_test.go)
 Or see below:
-* Preamble:
+* Import:
 ```go
 package main
 
@@ -13,7 +27,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/orijtech/arxiv/v1"
+    "github.com/marvin-hansen/arxiv/v1"
 )
 ```
 
